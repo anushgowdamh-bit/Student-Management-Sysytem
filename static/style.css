@@ -1,0 +1,100 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+/* Login */
+
+.login-box {
+    width: 350px;
+    margin: 80px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Dashboard */
+
+.menu {
+    width: 400px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.menu a {
+    display: block;
+    background: #0077cc;
+    color: white;
+    padding: 12px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #005fa3;
+}
+
+/* Table */
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+table,
+th,
+td {
+    border: 1px solid gray;
+}
+
+th {
+    background: #0077cc;
+    color: white;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    margin: 5px;
+}

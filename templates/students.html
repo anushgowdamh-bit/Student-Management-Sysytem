@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Students</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h2>Student List</h2>
+
+    <form action="/search" method="POST">
+
+        <input type="text" name="search" placeholder="Search Name">
+
+        <button>Search</button>
+
+    </form>
+
+    <br>
+
+    <a href="/dashboard">Dashboard</a>
+
+    <a href="/add">Add Student</a>
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+
+        </tr>
+
+        {% for s in students %}
+
+        <tr>
+
+            <td>{{ s[0] }}</td>
+
+            <td>{{ s[1] }}</td>
+
+            <td>{{ s[2] }}</td>
+
+            <td>{{ s[3] }}</td>
+
+            <td>{{ s[4] }}</td>
+
+            <td>{{ s[5] }}</td>
+
+            <td>{{ s[6] }}</td>
+
+            <td>
+
+                <a href="/edit/{{ s[0] }}">Edit</a>
+
+                <a href="/delete/{{ s[0] }}">Delete</a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
