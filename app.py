@@ -1,17 +1,20 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import psycopg as pg
-
+import os
 app = Flask(__name__)
 app.secret_key = "sms123"
 
 # PostgreSQL Connection
-conn = pg.connect(
+DATABASE_URL=os.environ.get("DATABASE_URL")
+if DATABASE_URL:
+    conn=pg.connect(DATABASE_URL)
+else: 
+    conn = pg.connect(
     host="localhost",
     dbname="sms_db",
     user="postgres",
     password="Anush@123",
-    port="5432"
-)
+    port="5432")
 cur = conn.cursor()
 
 # ---------------- Login ----------------
