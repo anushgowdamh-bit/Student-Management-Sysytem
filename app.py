@@ -6,15 +6,7 @@ app.secret_key = "sms123"
 
 # PostgreSQL Connection
 DATABASE_URL=os.environ.get("DATABASE_URL")
-if DATABASE_URL:
-    conn=pg.connect(DATABASE_URL)
-else: 
-    conn = pg.connect(
-    host="localhost",
-    dbname="sms_db",
-    user="postgres",
-    password="Anush@123",
-    port="5432")
+conn=pg.connect(DATABASE_URL)
 cur = conn.cursor()
 
 # ---------------- Login ----------------
